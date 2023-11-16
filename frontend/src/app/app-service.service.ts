@@ -17,9 +17,11 @@ export class AppServiceService {
     }
   }
 
+
   initializeDB(){
     return this.http.get(`/${this.ROOT_URL}/dbinitialize`)
   }
+
 
   getTeacherData(){
     return this.http.get(`/${this.ROOT_URL}/listTeachers`)

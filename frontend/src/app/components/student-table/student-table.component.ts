@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router,NavigationExtras } from '@angular/router';
 import { faTrash, faPlus, faPenSquare } from '@fortawesome/free-solid-svg-icons';
 import {AppServiceService} from '../../app-service.service';
+
 @Component({
   selector: 'app-student-table',
   templateUrl: './student-table.component.html',
@@ -33,6 +34,15 @@ export class StudentTableComponent implements OnInit {
     };
     this.router.navigate(['editStudent'], navigationExtras )
   }
+
+  initializeDB(){
+    this.service.initializeDB().subscribe((response) => {
+      console.log('DB is Initialized')
+    }, (error) => {
+      console.log('ERROR - ', error)
+    })
+  }
+
 
   getStudentData(){
     this.service.getStudentData().subscribe((response)=>{

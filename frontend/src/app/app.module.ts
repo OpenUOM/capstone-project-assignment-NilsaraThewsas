@@ -13,6 +13,7 @@ import { AddNewTeacherComponent } from './components/add-new-teacher/add-new-tea
 import { AddNewStudentComponent } from './components/add-new-student/add-new-student.component';
 import { EditStudentComponent } from './components/edit-student/edit-student.component';
 import { EditTeacherComponent } from './components/edit-teacher/edit-teacher.component';
+import { ComponentNameComponent } from './component-name/component-name.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { EditTeacherComponent } from './components/edit-teacher/edit-teacher.com
     AddNewTeacherComponent,
     AddNewStudentComponent,
     EditStudentComponent,
-    EditTeacherComponent
+    EditTeacherComponent,
+    ComponentNameComponent
   ],
   imports: [
     BrowserModule,
